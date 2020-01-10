@@ -86,3 +86,8 @@
             (i32.mul
                 (local.get $y)
                 (global.get $width)))))
+
+(func $inRange (param $min i32) (param $max i32) (param $value i32) (result i32)
+    (i32.and
+        (i32.ge_s (local.get $value) (local.get $min))
+        (i32.lt_s (local.get $value) (local.get $max))))
