@@ -13,7 +13,7 @@ fetch('/life/life.wasm').then(response =>
     const membuf = instance.exports.memory.buffer;
     const dataview = new DataView(membuf);
 
-    // randomizeCells(dataview);
+    randomizeCells(dataview);
     render(ctx, dataview);
 
     setInterval(() => {
